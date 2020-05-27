@@ -1,7 +1,8 @@
 {
   "name": "AppTransacciones",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
