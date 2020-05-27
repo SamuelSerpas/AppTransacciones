@@ -1,0 +1,21 @@
+<ion-content>
+
+  <ion-tabs>
+
+    <ion-tab-bar slot="bottom" color="light">
+      <ion-tab-button tab="asociados">
+        <ion-icon name="people-outline"></ion-icon>
+        <ion-label>Asociados</ion-label>
+      </ion-tab-button>
+      <ion-tab-button (click)="listarAsociado()">
+        <ion-icon name="refresh-circle"></ion-icon>
+        <ion-label>Sincronizar</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="settings">
+        <ion-icon name="cog"></ion-icon>
+        <ion-label>Configuracion</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

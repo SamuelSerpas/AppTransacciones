@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home/asociados"></ion-back-button>
+    </ion-buttons>
+    <ion-title>detalles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <ion-list-header>
+      Detalles de Asociado
+    </ion-list-header>
+    <ion-item  *ngFor="let detalle of detalles ; let index = i">
+      <ion-avatar slot="start">
+        <img src="../assets/logo2.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ detalle.descripcionProducto }}</h2>
+        <p>{{ detalle.codCuenta }}</p>
+        <p>{{ detalle.codTipoCuenta }}</p>
+      </ion-label>
+    </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header >
+  <ion-toolbar color= "primary">
+    <ion-title>Asociados</ion-title>
+  </ion-toolbar>
+  <ion-searchbar (ionInput)="getItems($event)" placeholder="Nombre de Asosiado"></ion-searchbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <p style="text-align:center" ><ion-icon name="arrow-down"></ion-icon> Bajar para recargar lista Asociados </p>
+    <ion-item (click)="mostrarAsociado(asociado.idCliente)" *ngFor="let asociado of items ; let index = i">
+      <ion-avatar slot="start">
+        <img src="../assets/icono2.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>{{ asociado.nombreCliente }}</h2>
+        <p>{{ asociado.codCliente }}</p>
+      </ion-label>
+    </ion-item>
+    </ion-list>
+  </ion-content>
