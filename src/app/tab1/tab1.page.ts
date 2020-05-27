@@ -21,7 +21,7 @@ export class Tab1Page {
     .subscribe(
       res => {
         localStorage.setItem('token', res.token);
-        this.router.navigate(['/home/'])
+        this.router.navigate(['/home/home'])
       },
       err => console.log(err)
     )
